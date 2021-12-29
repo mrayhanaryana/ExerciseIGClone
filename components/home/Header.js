@@ -10,6 +10,40 @@ const Header = () => {
                     source={require('../../assets/logo.png')}
                 />
             </TouchableOpacity>
+
+            <View style={styles. iconsContainer}>
+                <TouchableOpacity>
+                    <Image
+                        source={{
+                            uri :'https://img.icons8.com/ios/344/plus-2-math.png'
+                        }}
+                        style={styles.icon}
+                    />
+                </TouchableOpacity>
+
+                <TouchableOpacity>
+                    <Image
+                        source={{
+                            uri :'https://img.icons8.com/material-outlined/344/filled-like.png'
+                        }}
+                        style={styles.icon}
+                    />
+                </TouchableOpacity>
+
+                <TouchableOpacity>
+                    <View style = {styles.unreadBadge}>
+                        <Text style={styles.unreadBadgeText}>11</Text>
+                    </View> 
+                    <Image
+                        source={{
+                            uri :'https://img.icons8.com/material-outlined/344/facebook-messenger.png'
+                        }}
+                        style={styles.icon}
+                    />
+                </TouchableOpacity>
+                
+            </View>
+        
         </View>
     )
 }
@@ -22,10 +56,38 @@ const styles = StyleSheet.create({
         marginHorizontal: 20,
     },
 
+    iconsContainer: {
+        flexDirection: 'row',
+    },
+
     logo: {
         width: 100,
         height: 50,
         resizeMode : 'contain',
+      },
+    
+      icon: {
+        width: 30,
+        height: 30,
+        marginLeft: 10,
+        resizeMode: 'contain',  
+      },
+
+      unreadBadge: {
+        backgroundColor: '#FF3250',
+        position: 'absolute',
+        left: 14,
+        bottom: 18,
+        width: 25,
+        height: 18,
+        borderRadius: 25,
+        alignItems: 'center',
+        zIndex: 100,
+      },
+
+      unreadBadgeText: {
+        color: 'white',
+        fontweight: '600',
       },
 })
 
