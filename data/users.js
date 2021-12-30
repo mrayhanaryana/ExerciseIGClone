@@ -2,24 +2,42 @@ export const USERS = [
     {
         user: 'mrayhanaryana',
         image:
-            'https://www.kindpng.com/picc/m/237-2371769_silhouette-people-vector-png-transparent-png.png',
+            'https://miro.medium.com/max/792/1*IlfcghwBI5Z_i9XZ65kgZQ.png',
     },
 
     {
-        user: 'Chanif',
+        user: 'chanifrusydi',
         image:
-            'https://www.kindpng.com/picc/m/237-2371769_silhouette-people-vector-png-transparent-png.png',
+            'https://miro.medium.com/max/792/1*IlfcghwBI5Z_i9XZ65kgZQ.png',
     },
 
     {
-        user: 'Hanifah',
+        user: 'hanifahmarta',
         image:
-            'https://www.kindpng.com/picc/m/237-2371769_silhouette-people-vector-png-transparent-png.png',
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCGxs0naqhiJRzLqoTzjvpVFEBJRV4AOU4gl7wWi3lAOGX2wdRV8ov2sKpil03148Qh8Y&usqp=CAU',
     },
 
     {
-        user: 'Aura',
+        user: 'Aurasyafa',
         image:
-            'https://www.kindpng.com/picc/m/237-2371769_silhouette-people-vector-png-transparent-png.png',
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCGxs0naqhiJRzLqoTzjvpVFEBJRV4AOU4gl7wWi3lAOGX2wdRV8ov2sKpil03148Qh8Y&usqp=CAU',
+    },
+
+    {
+        user: 'Agus',
+        image:
+            'https://miro.medium.com/max/792/1*IlfcghwBI5Z_i9XZ65kgZQ.png',
+    },
+
+    {
+        user: 'Tio',
+        image:
+            'https://miro.medium.com/max/792/1*IlfcghwBI5Z_i9XZ65kgZQ.png',
+    },
+
+    {
+        user: 'Asih',
+        image:
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCGxs0naqhiJRzLqoTzjvpVFEBJRV4AOU4gl7wWi3lAOGX2wdRV8ov2sKpil03148Qh8Y&usqp=CAU',
     },
 ]
