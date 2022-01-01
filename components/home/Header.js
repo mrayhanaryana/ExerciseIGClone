@@ -15,7 +15,7 @@ const Header = () => {
                 <TouchableOpacity>
                     <Image
                         source={{
-                            uri :'https://img.icons8.com/ios/344/plus-2-math.png'
+                            uri :'https://img.icons8.com/material-outlined/344/plus--v1.png'
                         }}
                         style={styles.icon}
                     />
