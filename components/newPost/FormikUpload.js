@@ -50,7 +50,7 @@ const [thumbnailUrl, setThumnailUrl] =  useState(PLACEHOLDER_IMG)
                 <View style={{flex: 1, marginLeft: 12}}>
                 <TextInput 
                 style={{color:'black', fontSize:20}}
-                placeholder='Wrire a caption here ...' 
+                placeholder='Write a caption here ...' 
                 placeholderTextColor='gray'
                 multiline={true}
                 onChangeText={handleChange('caption')}
