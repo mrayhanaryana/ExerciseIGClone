@@ -14,7 +14,9 @@ export const USERS = [
     {
         user: 'hanifahmarta',
         image:
-            'https://static.republika.co.id/uploads/images/inpicture_slide/jennifer-lawrence-_171019104636-416.jpg',
+            // 'https://static.republika.co.id/uploads/images/inpicture_slide/jennifer-lawrence-_171019104636-416.jpg',
+            // 'https://awsimages.detik.net.id/community/media/visual/2020/09/17/tontawan-5.png?w=700&q=90',
+            'http://4.bp.blogspot.com/-FlJx0FRS3NU/U0pptwpTEcI/AAAAAAAAXr8/Pjq2FT79Hl4/s3400/Emma+Watson+photo.filmcelebritiesactresses.blogspot-1475.jpg'
     },
 
     {

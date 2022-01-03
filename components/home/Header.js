@@ -7,7 +7,7 @@ const Header = ({navigation}) => {
             <TouchableOpacity>
                 <Image 
                     style={styles.logo} 
-                    source={require('../../assets/logo.png')}
+                    source={require('../../images/Instagram_logo.png')}
                 />
             </TouchableOpacity>
 
@@ -32,7 +32,7 @@ const Header = ({navigation}) => {
 
                 <TouchableOpacity>
                     <View style = {styles.unreadBadge}>
-                        <Text style={styles.unreadBadgeText}>11</Text>
+                        <Text style={styles.unreadBadgeText}>8</Text>
                     </View> 
                     <Image
                         source={{
@@ -53,7 +53,8 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         alignitems : 'center',
         flexDirection: 'row',
-        marginHorizontal: 20,
+        marginHorizontal: 10,
+        
     },
 
     iconsContainer: {
@@ -61,16 +62,21 @@ const styles = StyleSheet.create({
     },
 
     logo: {
-        width: 100,
-        height: 50,
+        width: 120,
+        height: 70,
         resizeMode : 'contain',
+        bottom: 5,
       },
     
       icon: {
-        width: 30,
-        height: 30,
-        marginLeft: 10,
-        resizeMode: 'contain',  
+        width: 27,
+        height: 27,
+        marginLeft: 20,
+        resizeMode: 'contain',
+        marginTop: 15,
+        justifyContent : 'space-between',
+        marginRight: 5,  
+        
       },
 
       unreadBadge: {
@@ -78,12 +84,14 @@ const styles = StyleSheet.create({
         position: 'absolute',
         left: 20,
         bottom: 30,
-        width: 25,
+        width: 20,
         height: 20,
         borderRadius: 25,
         alignItems: 'center',
         justifyContent: 'center',
         zIndex: 100,
+        marginBottom: 13,
+        marginLeft:15
       },
 
       unreadBadgeText: {

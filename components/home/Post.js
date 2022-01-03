@@ -6,21 +6,21 @@ const postFootericons = [
     {
         name: 'Like',
         imageUrl:
-            'https://img.icons8.com/external-kiranshastry-lineal-kiranshastry/344/external-heart-miscellaneous-kiranshastry-lineal-kiranshastry.png' ,
-        likedimageUrl: 'https://img.icons8.com/external-kiranshastry-lineal-color-kiranshastry/344/external-heart-miscellaneous-kiranshastry-lineal-color-kiranshastry.png',
+            'https://img.icons8.com/external-kiranshastry-lineal-kiranshastry/64/000000/external-heart-miscellaneous-kiranshastry-lineal-kiranshastry.png' ,
+        
     },
 
     {
         name: 'Comment',
         imageUrl:
-            'https://img.icons8.com/ios/344/topic.png' ,
+            'https://img.icons8.com/ios/50/000000/topic.png',
         
     },
 
     {
         name: 'Share',
         imageUrl:
-            'https://img.icons8.com/ios/2x/paper-plane.png' ,
+            'https://img.icons8.com/ios/50/000000/sent.png',
         
     },
 
@@ -55,17 +55,18 @@ const PostHeader=({post})=>(
     <View 
         style={{flexDirection: 'row', 
         justifyContent: 'space-between', 
-        margin: 5 , 
+        margin: 8, 
         alignItems: 'center', 
-        }}
-    >
+        }}>
+        
         <View style={{flexDirection: 'row', alignItems: 'center'}}>
             <Image source={{uri: post.profile_picture}} style={styles.story} />
-            <Text style={{color: 'black', marginLeft: 5, fontWeight: '700'}}>
+            <Text style={{color: 'black', marginLeft: 10, fontWeight: '700'}}>
                 {post.user}
             </Text>
         </View>
-        <Text style={{color: 'black', fontWeight: '900'}}>...</Text>
+        <Image source={{uri: 'https://img.icons8.com/material-rounded/24/000000/menu-2.png' }} style={{ width: 16, height: 16}}/>
+        
     </View>
 )
 
@@ -74,11 +75,8 @@ const PostImage = ({post})=>(
     style={{
         width: '100%',
         height: 450,
-        }}
-    >
-        <Image source={{uri: post.imageUrl}} style={{height: '100%', 
-        resizeMode: 'cover'}}
-        />
+        }}>
+        <Image source={{uri: post.imageUrl}} style={{height: '100%', resizeMode: 'cover'}}/>
     </View>
 )
 
@@ -86,12 +84,12 @@ const PostFooter = () =>(
     <View style={{flexDirection: 'row'}}>
         <View style={styles.leftFooterIconsContainer}>
             <Icon  imgStyle={styles.footerIcon} imgUrl={postFootericons[0].imageUrl} /> 
-            <Icon  imgStyle={styles.footerIcon} imgUrl={postFootericons[1].imageUrl} />
-            <Icon  imgStyle={styles.footerIcon} imgUrl={postFootericons[2].imageUrl} />
+            <Icon  imgStyle={styles.footerIconcom} imgUrl={postFootericons[1].imageUrl} />
+            <Icon  imgStyle={styles.footerIconshare} imgUrl={postFootericons[2].imageUrl} />
         </View>
 
         <View style={{flex: 1, alignItems: 'flex-end'}}>
-            <Icon imgStyle={styles.footerIcon} imgUrl={postFootericons[3].imageUrl} />
+            <Icon imgStyle={styles.footerIconsave} imgUrl={postFootericons[3].imageUrl} />
         </View>
     </View>
 
@@ -106,7 +104,7 @@ const Icon = ({imgStyle,imgUrl}) =>(
 
 const Likes = ({post})=> (
     <View style={{flexDirection: 'row', marginTop: 4}}>
-        <Text style={{color: 'black', fontWeight: '600'}}>{post.likes.toLocaleString('en')} likes</Text>
+        <Text style={{color: 'black', fontWeight: 'bold'}}>{post.likes.toLocaleString('en')} likes</Text>
     </View>
     
 )
@@ -114,7 +112,7 @@ const Likes = ({post})=> (
 const Caption = ({post}) =>(
     <View style={{marginTop: 5}}>
         <Text style={{color: 'black'}}>
-            <Text style={{fontWeight: '600'}}>{post.user}</Text> 
+            <Text style={{fontWeight: 'bold'}}>{post.user}</Text> 
             <Text> {post.caption}</Text> 
         </Text>
     </View>
@@ -136,7 +134,7 @@ const Comments = ({post}) => (
         {post.comments.map((comment, index) => (
             <View key={index} style={{flexDirection: 'row', marginTop: 5}}>
                 <Text style={{color: 'black'}}>
-                    <Text style={{fontWeight: '600'}}> {comment. user} </Text>
+                    <Text style={{fontWeight: 'bold'}}> {comment. user} </Text>
                     {comment.comment}
                 </Text>
             </View>
@@ -157,14 +155,32 @@ const styles = StyleSheet.create({
     },
 
     footerIcon: {
-        width: 33,
-        height: 33,
+        width: 28,
+        height: 28,
+        bottom: 1,
+        
+    },
+    footerIconcom: {
+        width: 25,
+        height: 25,
+    },
+    footerIconshare: {
+        width: 28,
+        height: 28,
+        bottom: -1
+    },
+    footerIconsave: {
+        width: 25,
+        height: 25,
+        bottom: -2,
+        
     },
 
     leftFooterIconsContainer: {
         flexDirection: 'row',
-        width: '32%',
+        width: '30%',
         justifyContent: 'space-between',
+        
     }
 })
 
