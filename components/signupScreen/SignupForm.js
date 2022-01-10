@@ -13,9 +13,9 @@ const SignupForm = ({navigation}) => {
         .required()
         .min(6, 'Your password has to have at least 6 characters')
        })
-       const onSignUp = async() => {
+       const onSignUp = async(email,password) => {
         try {
-            await createUserWithEmailAndPassword(email, password)
+            await createUserWithEmailAndPassword(auth,email, password)
         }
         catch(error) {
             console.log(error)
@@ -33,7 +33,7 @@ const SignupForm = ({navigation}) => {
                 validateOnMount={true}
             
             >
-                {({handleChange,handleBlur,handleSubmit,values, isValid}) => (
+                {({handleChange,handleBlur,values, isValid}) => (
                     <>
                         <View style={[
                             styles.inputField,
@@ -106,7 +106,7 @@ const SignupForm = ({navigation}) => {
                             <Text style={{color: '#6BB0F5'}}>Forgot Password?</Text>
                         </View>
 
-                        <Pressable titlesize={200} 
+                        <Pressable titlesize='large'
                                 style={styles.button(isValid)} 
                                 onPress={onSignUp}
                                 disabled={!isValid} 
