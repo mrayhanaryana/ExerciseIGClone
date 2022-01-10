@@ -3,7 +3,10 @@ import { View, Text, TextInput, StyleSheet, Pressable, TouchableOpacity ,Alert} 
 import { Formik } from 'formik' 
 import * as Yup from 'yup' 
 import Validator from 'email-validator'
-import firebase from '../../firebase'
+import { auth } from '../../firebase'
+import { signInWithEmailAndPassword } from 'firebase/auth'
+
+
 
 const LoginForm = ({navigation}) => {
     const LoginFormSchema = Yup.object().shape({
@@ -13,14 +16,17 @@ const LoginForm = ({navigation}) => {
         .min(6, 'Your password has to have at least 6 characters')
        })
        const onLogin = async(email,password) => {
-           try {
-            await firebase.auth().signInWithEmailAndPassword(email, password)
-            console.log('Login Successful')
-           }catch(error){
-            Alert.alert(error.message)
-           }
-         }
-
+            await signInWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+                console.log(userCredential)
+                console.log('Login Successful')
+           })
+           .catch((error) => {
+               const errorCode = error.code
+               const errorMessage = error.message
+               Alert.alert(errorCode, errorMessage)
+           });
+        }
     return (
         <View style={styles.wrapper}>
             <Formik
